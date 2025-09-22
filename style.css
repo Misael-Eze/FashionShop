@@ -1,0 +1,44 @@
+#bienvenida {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#bienvenida::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* Capa oscura */
+  z-index: 1;
+}
+
+#bienvenida .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+#bienvenida h1 {
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+  animation: sombraGlow 3s infinite alternate;
+}
+
+@keyframes sombraGlow {
+  from { text-shadow: 2px 2px 5px rgba(0,0,0,0.8); }
+  to { text-shadow: 4px 4px 15px rgba(167, 199, 231, 0.9); }
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+
